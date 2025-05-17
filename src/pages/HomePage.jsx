@@ -3,6 +3,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ArrowRight, BotMessageSquare, BrainCircuit, MapPin, MessageSquareText, Sparkles, Users, Zap } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -29,8 +30,10 @@ const HomePage = () => {
                 Let our Gemini AI assistant design personalized itineraries, discover hidden gems, and make your next adventure unforgettable.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Button size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-primary/30 transition-all duration-300 bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-700">
+                <Button asChild size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-primary/30 transition-all duration-300 bg-gradient-to-r from-primary to-indigo-600 hover:from-primary/90 hover:to-indigo-700">
+                <Link to="/plan-trip">
                   Start Planning Now <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-white border-white/70 hover:bg-white/10 hover:text-white hover:border-white transition-all duration-300 backdrop-blur-sm">
                   Explore Destinations
