@@ -16,8 +16,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 const PlanTripPage = () => {
+  const navigate = useNavigate();
   const [destination, setDestination] = useState("");
   const [dates, setDates] = useState({ from: undefined, to: undefined });
   const [numTravelers, setNumTravelers] = useState("1");
@@ -44,9 +46,12 @@ const PlanTripPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = {
+    const formDataToSubmit = {
       destination,
-      dates,
+      dates: {
+        from: dates.from ? format(dates.from, "yyyy-MM-dd") : undefined,
+        to: dates.to ? format(dates.to, "yyyy-MM-dd") : undefined,
+      },
       numTravelers,
       travelerType,
       budget,
@@ -58,8 +63,9 @@ const PlanTripPage = () => {
       mustHaves,
       additionalNotes,
     };
-    console.log("Trip Plan Data:", formData);
-    alert("Trip plan submitted! Check console for data.");
+    console.log("Trip Plan Data:", formDataToSubmit);
+
+    navigate('/itinerary', { state: { formData: formDataToSubmit } });
   };
 
   const interestOptions = [
