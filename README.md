@@ -1,12 +1,37 @@
-# React + Vite
+# VoyageAI - AI Travel Planner 🌍✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+VoyageAI is an intelligent travel planning website designed to help users craft their dream journeys with the power of Google's Gemini AI. Users can input their travel preferences, and VoyageAI will generate a personalized itinerary, suggest hidden gems, and make travel planning a breeze.
 
-Currently, two official plugins are available:
+Built with ReactJS, Tailwind CSS, Shadcn/UI components, and a Node.js backend to interface with the Gemini AI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+*   **Intuitive Homepage:** Sleek and modern landing page introducing the service.
+*   **Comprehensive Trip Planning Form:** Users can specify:
+    *   Destination(s)
+    *   Travel Dates
+    *   Number of Travelers & Travel Style (Solo, Couple, Family, etc.)
+    *   Budget Level
+    *   Interests & Themes (Adventure, Relaxation, Culture, Foodie, etc.)
+    *   Travel Pace
+    *   Preferred Accommodation Type
+    *   Must-have activities and additional notes.
+*   **AI-Powered Itinerary Generation:**
+    *   Leverages Google's Gemini AI to create personalized travel plans.
+    *   Backend processes user input and constructs effective prompts for the AI.
+*   **Dynamic Itinerary Display Page:**
+    *   Shows a loading state while the itinerary is being generated.
+    *   Clearly presents the AI-generated itinerary, typically including:
+        *   Overall trip title and summary.
+        *   Day-by-day breakdown with activities and notes.
+        *   Travel tips and packing suggestions (depending on AI output).
+    *   Handles error states gracefully.
+*   **Modern Tech Stack:**
+    *   **Frontend:** ReactJS, Vite, Tailwind CSS, Shadcn/UI
+    *   **Backend:** Node.js, Express.js (for Gemini API interaction)
+    *   **AI:** Google Gemini API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![image](https://github.com/user-attachments/assets/84bb5cf9-84ce-477b-92b4-7aeda146ae68)
+
+![image](https://github.com/user-attachments/assets/a0ecbd4d-8126-47df-9db7-c44b07d08e9f)
+
